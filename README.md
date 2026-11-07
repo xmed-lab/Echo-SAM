@@ -198,11 +198,10 @@ The following DSC values (%) are reported in the manuscript; they have not been 
 
 ```bibtex
 @inproceedings{yang2026echosam,
-  title     = {{Echo-SAM}: Zero-Shot Learning of Unseen Structures via Medical Knowledge Graph Grounding},
+  title     = {Echo-SAM: Zero-Shot Learning of Unseen Structures via Medical Knowledge Graph Grounding},
   author    = {Yang, Jiewen and Li, Xiaomeng},
   booktitle = {Advances in Neural Information Processing Systems},
   year      = {2026},
-  url       = {https://neurips.cc/virtual/2026/loc/sydney/poster/152656}
 }
 ```
 
