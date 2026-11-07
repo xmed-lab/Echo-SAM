@@ -19,7 +19,7 @@
 
 Echo-SAM studies **zero-shot echocardiographic segmentation of unseen anatomical structures**. It combines SAM 3 with a cardiac knowledge graph, knowledge-grounded prompt fusion, and geometric support inference to localize targets through their relationships with visible anatomical anchors.
 
-This source release contains the model, medical knowledge graph, geometric reasoning utilities, pseudo-label losses, training configurations, evaluation code, and visualizers supplied with the manuscript. The Python package retains the `sam3` name used by the implementation. See [release notes](docs/RELEASE_NOTES.md) for the scope of this snapshot and remaining differences from the complete paper pipeline.
+This repository contains the model, medical knowledge graph, geometric reasoning utilities, pseudo-label losses, training configurations, evaluation code, and visualizers. The Python package retains the `sam3` name used by the implementation.
 
 ## Method
 
@@ -71,7 +71,7 @@ Run commands below from the repository root. Use a separate environment from an 
 ### Prepare weights and data
 
 1. Obtain the base `sam3.pt` checkpoint through the [official SAM 3 project](https://github.com/facebookresearch/sam3#installation). Follow its checkpoint access instructions and terms.
-2. Prepare image frames and COCO instance-segmentation JSON files. The supplied loaders expect `images`, `annotations`, and `categories`, with category IDs matching the prompt definitions. Raw-dataset conversion scripts and the experiment split manifests are not included.
+2. Prepare image frames and COCO instance-segmentation JSON files. The supplied loaders expect `images`, `annotations`, and `categories`, with category IDs matching the prompt definitions.
 3. Set your local paths:
 
 ```bash
@@ -144,9 +144,7 @@ CUDA_VISIBLE_DEVICES=0 python -m sam3.train.run_eval \
 
 Update the `val.img_folder` and `val.json` entries in [the evaluation configuration](sam3/train/configs/ultrasound_cardiac/ultrasound_cardiac_zero_shot_eval.yaml) to select your prepared CAMUS, HMC-QU, EchoNet-Dynamic, EchoNet-Pediatric, or CardiacUDA test set. Evaluation outputs default to `outputs/zero_shot_eval/`.
 
-The evaluator writes COCO predictions and reports Dice, IoU, HD95, and ASSD, including per-category scores. Overlap metrics are fractions; multiply by 100 for percentage reporting. Boundary distances use pixel units. The supplied implementation excludes infinite distances from boundary-metric averages; consult [the evaluation notes](docs/RELEASE_NOTES.md#evaluation-details) before comparing with manuscript tables.
-
-This entry point evaluates the supplied medical image model. It does not assemble the paper's complete predicted-anchor → geometric-support → target-decoding inference sequence; the geometric utilities and pseudo-label training code are included separately. Complete benchmark reproduction also requires the original split/preprocessing scripts and trained checkpoints.
+The evaluator writes COCO predictions and reports Dice, IoU, HD95, and ASSD, including per-category scores. Overlap metrics are fractions; multiply by 100 for percentage reporting. Boundary distances use pixel units. The supplied implementation excludes infinite distances from boundary-metric averages.
 
 ### Visualize geometric pseudo targets
 
