@@ -1,0 +1,19 @@
+Echo-SAM source release
+
+This repository contains the Echo-SAM research implementation supplied with
+"Echo-SAM: Zero-Shot Learning of Unseen Structures via Medical Knowledge Graph
+Grounding" by Jiewen Yang and Xiaomeng Li (2026).
+
+The sam3 package includes code from Meta's Segment Anything Model 3 project:
+https://github.com/facebookresearch/sam3
+Copyright (c) Meta Platforms, Inc. and affiliates. All Rights Reserved.
+
+The upstream SAM License is reproduced in LICENSE. It was retrieved from
+facebookresearch/sam3 at commit f1647e8d0c1d280991f4d1b7d974c2704537fe66.
+This identifies the license source, not the provenance commit of the supplied
+research code, for which no upstream revision was recorded.
+
+Existing third-party copyright and license notices remain applicable. No
+additional blanket license is asserted here for the authors' original research
+contributions or manuscript figures. Model checkpoints and datasets must be
+obtained separately under their respective terms.

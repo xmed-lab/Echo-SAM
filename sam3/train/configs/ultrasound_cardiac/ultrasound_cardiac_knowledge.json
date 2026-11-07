@@ -1,0 +1,220 @@
+{
+  "structure_graph": {
+    "left_ventricle": ["myocardium", "left_atrium", "interventricular_septum", "posterior_wall", "mitral_valve", "aortic_valve"],
+    "right_ventricle": ["myocardium", "right_atrium", "interventricular_septum", "tricuspid_valve", "pulmonary_valve"],
+    "left_atrium": ["left_ventricle", "mitral_valve", "ascending_aorta"],
+    "right_atrium": ["right_ventricle", "tricuspid_valve"],
+    "myocardium": ["left_ventricle", "right_ventricle", "interventricular_septum", "posterior_wall"],
+    "interventricular_septum": ["left_ventricle", "right_ventricle", "myocardium"],
+    "interatrial_septum": ["left_atrium", "right_atrium"],
+    "posterior_wall": ["left_ventricle", "myocardium"],
+    "mitral_valve": ["left_atrium", "left_ventricle"],
+    "tricuspid_valve": ["right_atrium", "right_ventricle"],
+    "aortic_valve": ["left_ventricle", "ascending_aorta"],
+    "pulmonary_valve": ["right_ventricle", "pulmonary_artery"],
+    "ascending_aorta": ["left_atrium", "aortic_valve", "descending_aorta"],
+    "descending_aorta": ["ascending_aorta"],
+    "pulmonary_artery": ["right_ventricle", "pulmonary_valve"],
+    "other": []
+  },
+  "structure_descriptions": {
+    "left_ventricle": {
+      "relation": [
+        "Separated from right ventricle by the interventricular septum",
+        "Connected to left atrium via the mitral valve",
+        "Ejects oxygenated blood into ascending aorta through the aortic valve",
+        "Surrounded circumferentially by myocardium (thickest in basal segments)",
+        "Forms the apex of the heart"
+      ],
+      "morphology": [
+        "Thick-walled, conical muscular chamber",
+        "Main systemic pumping chamber",
+        "Endocardial surface smooth except for papillary muscles",
+        "In echocardiography: appears as a circular structure in short-axis view, elliptical in long-axis"
+      ]
+    },
+    "right_ventricle": {
+      "relation": [
+        "Separated from left ventricle by the interventricular septum",
+        "Connected to right atrium via the tricuspid valve",
+        "Ejects deoxygenated blood into pulmonary artery through the pulmonary valve",
+        "Wrapped around the anterior and lateral aspects of the left ventricle",
+        "Shares the apex with the left ventricle"
+      ],
+      "morphology": [
+        "Thin-walled, crescent-shaped chamber in cross-section",
+        "Moderator band (septomarginal trabecula) is a characteristic internal structure",
+        "Wall thickness typically <5 mm in adults",
+        "Appears triangular in apical 4-chamber view"
+      ]
+    },
+    "left_atrium": {
+      "relation": [
+        "Receives oxygenated blood from four pulmonary veins (not explicitly segmented here)",
+        "Connected to left ventricle via the mitral valve",
+        "Posterior wall adjacent to descending aorta and esophagus",
+        "Anterior wall adjacent to ascending aorta"
+      ],
+      "morphology": [
+        "Smooth-walled posterior chamber",
+        "Largest cardiac chamber by volume but often appears smaller in 2D imaging due to foreshortening",
+        "Left atrial appendage (not segmented) is a common site for thrombus in AF"
+      ]
+    },
+    "right_atrium": {
+      "relation": [
+        "Receives systemic venous return via superior/inferior vena cava and coronary sinus",
+        "Connected to right ventricle via the tricuspid valve",
+        "Interatrial septum separates it from left atrium (fossa ovalis region)"
+      ],
+      "morphology": [
+        "Thin-walled chamber with prominent pectinate muscles in the appendage",
+        "Crista terminalis is an internal ridge separating smooth and trabeculated regions",
+        "Appears anterior and to the right of left atrium in standard views"
+      ]
+    },
+    "myocardium": {
+      "relation": [
+        "Comprises the muscular walls of both ventricles and parts of atria",
+        "Encases the left and right ventricular cavities",
+        "Contains the interventricular septum and left ventricular posterior wall as integral components",
+        "Surrounded externally by the pericardium"
+      ],
+      "morphology": [
+        "Striated cardiac muscle tissue with high echogenicity in ultrasound",
+        "Thickest around the left ventricle (8–12 mm in diastole), thinner around right ventricle (2–5 mm)",
+        "Contracts synchronously during systole to eject blood",
+        "Hypertrophy or thinning indicates pathological states (e.g., hypertension, infarction)"
+      ]
+    },
+    "interventricular_septum": {
+      "relation": [
+        "Forms the medial boundary of both left and right ventricles",
+        "Composed of muscular (apical) and membranous (basal) portions",
+        "Adjacent to the aortic and mitral valves at its base"
+      ],
+      "morphology": [
+        "Curved muscular wall, thicker at base (~10–15 mm), thinner at apex",
+        "Moves toward the posterior wall during systole (normal contraction pattern)",
+        "In hypertrophic cardiomyopathy, may show asymmetric thickening"
+      ]
+    },
+    "interatrial_septum": {
+      "relation": [
+        "Separates the left atrium from the right atrium",
+        "Contains the fossa ovalis, a remnant of the fetal foramen ovale",
+        "Located posterior to the aortic root and anterior to the esophagus in axial orientation",
+        "Forms part of the medial wall of both atria"
+      ],
+      "morphology": [
+        "Thin, smooth muscular membrane (typically 2–4 mm thick in adults)",
+        "Fossa ovalis appears as an oval depression on the right atrial side, surrounded by a raised limbus",
+        "In echocardiography: best visualized in subcostal or transesophageal views as a linear echo-bright structure between atria",
+        "Aneurysm, perforation (e.g., patent foramen ovale), or tumor infiltration may alter its contour or mobility"
+      ]
+    },
+    "posterior_wall": {
+      "relation": [
+        "Refers specifically to the inferolateral wall of the left ventricle",
+        "Opposite the interventricular septum",
+        "Externally adjacent to the pericardium and often the descending aorta"
+      ],
+      "morphology": [
+        "Muscular segment of the left ventricle",
+        "Thickness similar to septum in healthy hearts (symmetric hypertrophy if both thickened)",
+        "Key region for assessing regional wall motion abnormalities (e.g., in inferior MI)"
+      ]
+    },
+    "mitral_valve": {
+      "relation": [
+        "Bicuspid valve connecting left atrium and left ventricle",
+        "Anterior leaflet adjacent to aortic valve (fibrous continuity)",
+        "Supported by chordae tendineae and papillary muscles (anterolateral and posteromedial)"
+      ],
+      "morphology": [
+        "Two leaflets: larger anterior (septal) and smaller posterior (mural)",
+        "Opens widely during diastole to allow LV filling",
+        "Coaptation line visible in systole; prolapse or flail indicates pathology"
+      ]
+    },
+    "tricuspid_valve": {
+      "relation": [
+        "Tricuspid valve connecting right atrium and right ventricle",
+        "Located more apically than the mitral valve",
+        "Separated from the pulmonary valve by the right ventricular outflow tract"
+      ],
+      "morphology": [
+        "Three leaflets: anterior, posterior, and septal",
+        "Thinner and more mobile than mitral valve",
+        "Regurgitation common in volume overload (e.g., pulmonary hypertension)"
+      ]
+    },
+    "aortic_valve": {
+      "relation": [
+        "Semilunar valve between left ventricle and ascending aorta",
+        "Fibrous continuity with the anterior mitral leaflet",
+        "Located centrally at the cardiac base"
+      ],
+      "morphology": [
+        "Three cusps: left, right, and non-coronary",
+        "Opens during systole to eject blood; closes sharply at end-systole",
+        "Calcification or fusion leads to stenosis; dilation causes regurgitation"
+      ]
+    },
+    "pulmonary_valve": {
+      "relation": [
+        "Semilunar valve between right ventricle and pulmonary artery",
+        "Located anterior and superior to the aortic valve",
+        "Separated from tricuspid valve by the right ventricular outflow tract"
+      ],
+      "morphology": [
+        "Three thin, delicate cusps",
+        "Less commonly diseased than aortic valve",
+        "Often difficult to visualize fully in standard echocardiographic views"
+      ]
+    },
+    "ascending_aorta": {
+      "relation": [
+        "Arises directly from the left ventricle via the aortic valve",
+        "Gives rise to coronary arteries (not segmented)",
+        "Continuous with the aortic arch and descending aorta"
+      ],
+      "morphology": [
+        "Tubular, anechoic lumen with bright intimal borders in ultrasound",
+        "Diameter typically 25–37 mm in adults",
+        "Dilation suggests aneurysm or connective tissue disorder (e.g., Marfan syndrome)"
+      ]
+    },
+    "descending_aorta": {
+      "relation": [
+        "Continuation of the aortic arch",
+        "Runs posterior to the left atrium in the thorax",
+        "Visible in parasternal long-axis and suprasternal views"
+      ],
+      "morphology": [
+        "Circular cross-section in transverse imaging",
+        "Wall may show atherosclerotic plaques in elderly patients",
+        "Used as an acoustic window in some echo views"
+      ]
+    },
+    "pulmonary_artery": {
+      "relation": [
+        "Arises from the right ventricular outflow tract via the pulmonary valve",
+        "Bifurcates into left and right pulmonary arteries near the aortic arch",
+        "Runs anterior to the descending aorta"
+      ],
+      "morphology": [
+        "Large vessel with thin walls and low-pressure flow",
+        "Diameter increases in pulmonary hypertension",
+        "Main trunk diameter normally <25 mm"
+      ]
+    },
+    "other": {
+      "relation": [],
+      "morphology": [
+        "Catch-all category for unclassified or low-confidence structures",
+        "May include artifacts, noise, or rare anatomical variants"
+      ]
+    }
+  }
+}
