@@ -9,6 +9,11 @@
 </p>
 
 <p align="center">
+  <b>NeurIPS 2026</b> ·
+  <a href="https://neurips.cc/virtual/2026/loc/sydney/poster/152656">Paper</a>
+</p>
+
+<p align="center">
   <a href="#method">Method</a> ·
   <a href="#setup">Setup</a> ·
   <a href="#training">Training</a> ·
@@ -192,11 +197,12 @@ The following DSC values (%) are reported in the manuscript; they have not been 
 ## Citation
 
 ```bibtex
-@misc{yang2026echosam,
-  title  = {Echo-SAM: Zero-Shot Learning of Unseen Structures via Medical Knowledge Graph Grounding},
-  author = {Yang, Jiewen and Li, Xiaomeng},
-  year   = {2026},
-  url    = {https://github.com/xmed-lab/Echo-SAM}
+@inproceedings{yang2026echosam,
+  title     = {{Echo-SAM}: Zero-Shot Learning of Unseen Structures via Medical Knowledge Graph Grounding},
+  author    = {Yang, Jiewen and Li, Xiaomeng},
+  booktitle = {Advances in Neural Information Processing Systems},
+  year      = {2026},
+  url       = {https://neurips.cc/virtual/2026/loc/sydney/poster/152656}
 }
 ```
 
